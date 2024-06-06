@@ -253,8 +253,193 @@
 <span>Q1:AI 工具曾經協助我們解決甚麼問題?</span><span></span><span></span><span>A1:AI 工具在各個領域都有所幫助，例如醫療領域，它們能夠協助醫生更準確地診斷疾病，幫助預防交通擁堵，優化城市交通流量，還有金融領域，AI 工具有助於識別和管理金融風險，預防詐欺行為。此外，AI 工具還可以改善自然語言處理，使得機器能夠更好地理解和處理人類語言，促進更有效的溝通和合作</span><br/>
 <h2>實作練習問題</h2>
 <h1>期末專案</h1>
-<span></span>
-<h1>Replit</h1>
+<h2>whack-a-mole</h2>
+<p><span>step1:問chatgpt如何製作打地鼠遊戲，用Flask來構建Web服務，並且用HTML、CSS和JavaScript來構建前端界面和遊戲邏輯。</span></p>
+<p><span>step2:設置項目結構</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">whac_a_mole/
+├── app.py
+├── static/
+│   ├── style.css
+│   └── script.js
+└── templates/
+    └── index.html</pre>
+<p><span>step3:安裝Flask</span></p>
+<p><span>step4:編寫後端 (app.py)</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask, render_template
+ 
+app = Flask(__name__)
+ 
+@app.route('/')
+def index():
+    return render_template('index.html')
+ 
+if __name__ == '__main__':
+    app.run(host='10.10.40.178', port=5000, debug=True)
+</pre>
+<p><span>step5: 編寫前端 (HTML, CSS, JavaScript)</span></p>
+<p><span>HTML:</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Whac-A-Mole&lt;/title&gt;
+    &lt;link rel="stylesheet" href="/static/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Whac-A-Mole Game&lt;/h1&gt;
+    &lt;div class="game"&gt;
+        &lt;div class="hole" id="hole1"&gt;&lt;/div&gt;
+        &lt;div class="hole" id="hole2"&gt;&lt;/div&gt;
+        &lt;div class="hole" id="hole3"&gt;&lt;/div&gt;
+        &lt;div class="hole" id="hole4"&gt;&lt;/div&gt;
+        &lt;div class="hole" id="hole5"&gt;&lt;/div&gt;
+        &lt;div class="hole" id="hole6"&gt;&lt;/div&gt;
+        &lt;div class="hole" id="hole7"&gt;&lt;/div&gt;
+        &lt;div class="hole" id="hole8"&gt;&lt;/div&gt;
+        &lt;div class="hole" id="hole9"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Score: &lt;span id="score"&gt;0&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;Time left: &lt;span id="timer"&gt;30&lt;/span&gt; seconds&lt;/p&gt;
+    &lt;script src="/static/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p><span>CSS:</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5); /* 漸變背景 */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+h1 {
+    color: #fff;
+}
+ 
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+ 
+.hole {
+    width: 100px;
+    height: 100px;
+    background-color: #8B4513;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden; /* 確保地鼠不會超出洞口 */
+}
+ 
+.mole {
+    width: 80px;
+    height: 80px;
+    font-size: 3em; /* 增加表情符號大小 */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: none;
+}
+ 
+.hole.active .mole {
+    display: block;
+}
+ 
+p {
+    color: #fff;
+    font-size: 1.2em;
+}</pre>
+<p><span>JavaScript:</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">let score = 0;
+let activeHoles = [];
+let gameInterval = null;
+let gameTime = 30; // 遊戲時間30秒
+let timerInterval = null;
+let moleIntervalTime = 700; // 地鼠出現間隔時間，初始為700毫秒
+let speedIncreaseCount = 0; // 速度增加次數
+ 
+document.addEventListener("DOMContentLoaded", () =&gt; {
+    const holes = document.querySelectorAll('.hole');
+    holes.forEach(hole =&gt; {
+        const mole = document.createElement('div');
+        mole.classList.add('mole');
+        mole.textContent = '🐹'; // 使用表情符號來表示地鼠
+        hole.appendChild(mole);
+        hole.addEventListener('click', () =&gt; {
+            if (hole.classList.contains('active')) {
+                score++;
+                document.getElementById('score').textContent = score;
+                hole.classList.remove('active');
+            }
+        });
+    });
+ 
+    function randomHoles() {
+        // 清除上一次的地鼠
+        activeHoles.forEach(hole =&gt; hole.classList.remove('active'));
+        activeHoles = [];
+         
+        // 隨機選擇1或2隻地鼠出現
+        let numMoles = Math.floor(Math.random() * 2) + 1;
+        let indices = [];
+ 
+        while (indices.length &lt; numMoles) {
+            let index = Math.floor(Math.random() * holes.length);
+            if (!indices.includes(index)) {
+                indices.push(index);
+            }
+        }
+ 
+        indices.forEach(index =&gt; {
+            let hole = holes[index];
+            hole.classList.add('active');
+            activeHoles.push(hole);
+        });
+    }
+ 
+    function startGame() {
+        gameInterval = setInterval(randomHoles, moleIntervalTime);
+        timerInterval = setInterval(updateTimer, 1000);
+    }
+ 
+    function updateTimer() {
+        if (gameTime &gt; 0) {
+            gameTime--;
+            document.getElementById('timer').textContent = gameTime;
+            if (gameTime % 10 === 0 &amp;&amp; speedIncreaseCount &lt; 3) {
+                increaseSpeed();
+                speedIncreaseCount++;
+            }
+        } else {
+            endGame();
+        }
+    }
+ 
+    function increaseSpeed() {
+        clearInterval(gameInterval);
+        moleIntervalTime = Math.max(300, moleIntervalTime - 100); // 每次減少100ms，直到300ms
+        gameInterval = setInterval(randomHoles, moleIntervalTime);
+    }
+ 
+    function endGame() {
+        clearInterval(gameInterval);
+        clearInterval(timerInterval);
+        activeHoles.forEach(hole =&gt; hole.classList.remove('active'));
+        alert('Game Over! Your final score is: ' + score);
+    }
+ 
+    startGame();
+});</pre>
+<p>最後成果:</p>
+<p><img alt="" height="220" src="/images/打地鼠.png" width="392"/></p><h1>Replit</h1>
 <p><a href="https://replit.com">https://replit.com</a></p>
 <p>利用 init_replit 指令安裝所需 Python 模組<br/><br/>chmod u+x init_replit<br/><br/>./init_replit</p>
 <p dir="auto">On Replit:</p>
