@@ -142,13 +142,72 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content">Python 程式系統 << <a href='Python 程式系統.html'>Previous</a> <a href='AI 工具.html'>Next</a> >> AI 工具<br /><h1>網頁上的 IDE</h1>
-<p>Q1:IDE 是甚麼?</p>
-<p>A1:IDE（整合開發環境）是指一種透過網頁存取的軟體工具，它整合了編碼、調試、版本控制等開發所需的功能，讓開發者可以直接在網頁瀏覽器中進行軟體開發。這種IDE通常包括程式碼編輯器、編譯器、偵錯器等工具，能夠幫助開發者更有效率地編寫、偵錯和管理程式碼。常見的網頁上的IDE包括CodePen、JSFiddle、Replit等。這些工具可以讓開發者在不同的作業系統和裝置上開發，而無需安裝額外的開發環境。</p>
-<p>Q2:學會使用網頁上的各種 IDE 之後, 有沒有甚麼感想或心得?</p>
-<p>A2:我認為網頁IDE的最大優勢之一是無需安裝，只需透過瀏覽器存取即可開始編碼。這意味著你可以在任何地方、任何裝置上開始工作，只要有網路連線。例如，你可以在家裡的筆記型電腦上編寫程式碼，然後在學校或辦公室的桌上型電腦上繼續工作，而不會受到本地開發環境的限制。 </p>
+    <div id="tipue_search_content">基礎語法 << <a href='基礎語法.html'>Previous</a> <a href='基本 html 語法.html'>Next</a> >> 基本 html 語法<br /><h1>JavaScript基礎語法</h1>
+<p>Q:什麼是JavaScript?</p>
+<p>A:JavaScript是用來建立互動式網頁的程式設計語言，從重新整理社交媒體送到顯示動畫與互動式地圖，JavaScript 的功能可以提升使用者體驗。JavaScript 作為用戶端指令碼語言，是全球資訊網的核心技術之一。當瀏覽網際網路時，只要在網頁上看見浮動切換影像，一按即顯示的下拉式功能表，或是動態變更的元件色彩，這些都是 JavaScript 呈現的。</p>
+<p>在JavaScript還未上市時，早期都是用html語法，製作出一個靜態網站，但無法讓網頁有更多變化，若想要更精緻，就需要用到Script語言。</p>
+<p>JavaScript前名是Live Script。</p>
+<p><span>很多人搞錯的觀念:Java和JavaScript程式是完全不同的東西。</span></p>
+<p>如何撰寫基本的JavaScript?</p>
+<p>JavaScript最常使用在網頁上，所以所有的瀏覽器都可以來執行JavaScript程式，我們可以做一個簡單的練習，例如hello.html，代碼如下</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html;
+ charset=utf-8"&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Hello World!&lt;/title&gt;
+    &lt;script&gt;
+      document.write('Hello world!');
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>document.write表示寫入資料夾到文件中(因為當前文件尚未關閉，所以會寫到文件未端，而瀏覽器會自動寫到&lt;body&gt;尾端，但如果沒有建立&lt;body&gt;，則會在建立後跑到&lt;body&gt;的開始處)，接著利用瀏覽器開啟網頁檔，就可以看到程式的結果。</p>
+<p>如何在html中加入JavaScript?</p>
+<p>第一種方法:如上面的範例，在html中直接使用&lt;script&gt;...&lt;/script&gt;的標籤來表示嵌入一段JavaScript程式，而嵌入的位置可以在&lt;head&gt;和&lt;body&gt;之中的任意位置(不建議放在&lt;head&gt;最前面，因為&lt;head&gt;第一個節點通常為編碼宣告)。</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">&lt;html&gt;
+&lt;body&gt;
+&lt;script type="text/javascript"&gt;
+var x =6, y=8;
+var s = "Hello! "
+ 
+t = s + x;
+z = x * y;
+ 
+document.write("&lt;pre&gt;x="+x+"\ny="+y+"\ns="+s+"\nt="+t+"\nz="+z+"&lt;/pre&gt;");
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>結果為:x=6 y=8 s=Hello! 6 z=48</p>
+<p>第二種方法:是將JavaScript程式獨立寫成別的檔案，不直接和html檔案寫在一起，JavaScript的檔案副檔名為js檔，例如建立一個hello.js檔，裡面寫入:</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">document.write(‘Hello world!’);</pre>
+<p>然後html檔案則改為:</p>
+<div>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html;
+ charset=utf-8"&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Hello World!&lt;/title&gt;
+    &lt;script src="hello.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>如上所示，在&lt;script&gt;中使用src的屬性指出外部js的位址</p>
+<p><span>註解</span></p>
+<p>註解部分不會執行，是給人看的，JavaScript中有兩種註解方式:</p>
+<p>1.//單行註解:兩個斜線後面的部分將不會處理。</p>
+<p>2./*...*/多行註解:註解中間的部分將不會處理。</p>
 <p></p>
-<br />Python 程式系統 << <a href='Python 程式系統.html'>Previous</a> <a href='AI 工具.html'>Next</a> >> AI 工具</div>
+<p>分號結尾</p>
+<p>一般程式語言，每段程式結尾都是以分號表示，但JavaScript能夠自動幫你在位加上分號的結尾加上分號，JavaScript容許這樣的錯誤發生，但有時候JavaScript會誤解你的意思而造成錯誤。</p>
+<p></p>
+<p></p>
+</div><br />基礎語法 << <a href='基礎語法.html'>Previous</a> <a href='基本 html 語法.html'>Next</a> >> 基本 html 語法</div>
 
     <!-- footer -->
       <div class="container">
