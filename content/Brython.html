@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='cmsimde.html'>cmsimde</a><li class='has-children'><a href='homework.html'>homework</a><ul class='dropdown'><li><a href='W2.html'>W2</a><li class='has-children'><a href='W3.html'>W3</a><ul class='dropdown'><li><a href='wink.html'>wink</a><li><a href='git order.html'>git order</a><li><a href='建立分組倉儲.html'>建立分組倉儲</a></li></ul><li><a href='W4.html'>W4</a><li class='has-children'><a href='W6.html'>W6</a><ul class='dropdown'><li><a href='Question 1.html'>Question 1</a><li><a href='Question 2.html'>Question 2</a></li></ul><li><a href='W8.html'>W8</a><li class='has-children'><a href='w13.html'>w13</a><ul class='dropdown'><li><a href='使用 SSH 客戶端遠端登入.html'>使用 SSH 客戶端遠端登入</a><li><a href='修改初始密碼.html'>修改初始密碼</a><li><a href='確保資料安全.html'>確保資料安全</a><li><a href='獲取幫助和支持.html'>獲取幫助和支持</a></li></li></ul></ul><li class='has-children'><a href='期中整理.html'>期中整理</a><ul class='dropdown'><li><a href='網頁式內容管理.html'>網頁式內容管理</a><li><a href='Python 程式系統.html'>Python 程式系統</a><li><a href='網頁上的 IDE.html'>網頁上的 IDE</a><li><a href='AI 工具.html'>AI 工具</a><li><a href='實作練習問題.html'>實作練習問題</a></li></ul><li class='has-children'><a href='期末專案.html'>期末專案</a><ul class='dropdown'><li><a href='whack-a-mole.html'>whack-a-mole</a></li></ul><li><a href='Replit.html'>Replit</a><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='cmsimde.html'>cmsimde</a><li class='has-children'><a href='homework.html'>homework</a><ul class='dropdown'><li><a href='W2.html'>W2</a><li class='has-children'><a href='W3.html'>W3</a><ul class='dropdown'><li><a href='wink.html'>wink</a><li><a href='git order.html'>git order</a><li><a href='建立分組倉儲.html'>建立分組倉儲</a></li></ul><li><a href='W4.html'>W4</a><li class='has-children'><a href='W6.html'>W6</a><ul class='dropdown'><li><a href='Question 1.html'>Question 1</a><li><a href='Question 2.html'>Question 2</a></li></ul><li><a href='W8.html'>W8</a><li class='has-children'><a href='w13.html'>w13</a><ul class='dropdown'><li><a href='使用 SSH 客戶端遠端登入.html'>使用 SSH 客戶端遠端登入</a><li><a href='修改初始密碼.html'>修改初始密碼</a><li><a href='確保資料安全.html'>確保資料安全</a><li><a href='獲取幫助和支持.html'>獲取幫助和支持</a></li></ul><li><a href='W14.html'>W14</a></li></ul><li class='has-children'><a href='期中整理.html'>期中整理</a><ul class='dropdown'><li><a href='網頁式內容管理.html'>網頁式內容管理</a><li><a href='Python 程式系統.html'>Python 程式系統</a><li><a href='網頁上的 IDE.html'>網頁上的 IDE</a><li><a href='AI 工具.html'>AI 工具</a><li><a href='實作練習問題.html'>實作練習問題</a></li></ul><li class='has-children'><a href='期末專案.html'>期末專案</a><ul class='dropdown'><li><a href='whack-a-mole.html'>whack-a-mole</a></li></ul><li><a href='Replit.html'>Replit</a><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -296,7 +296,9 @@ doc["add1to100"].bind('click', add)
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <p><!-- 存擋表單開始 --></p>
-<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
+<label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></li>
+</ol>
+</ol>
 <p><!-- 存擋表單結束 --></p>
 <p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
@@ -307,7 +309,13 @@ doc["add1to100"].bind('click', add)
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
 <div id="brython_div1"></div>
-<!-- editor1 結束 --><hr/><!-- ########################################## -->
+<ol>
+<ol><!-- editor1 結束 --></ol>
+</ol>
+<hr/>
+<ol>
+<ol><!-- ########################################## --></ol>
+</ol>
 <p>從 1 累加到 100 part2:</p>
 <p><button id="add1to100part2">1 add to 100</button><button id="cango_three_gears">cango_three_gears</button><button id="bsnake">BSnake</button><button id="aitetris">AI Tetris</button><button id="threejsblock">Rotating Block</button></p>
 <p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src2"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
@@ -410,12 +418,14 @@ doc["threejsblock"].bind("click", threejsblock.do)
 </script>
 </p>
 <p><!-- add 1 to 100 part2 結束--></p>
-<!-- editor2 開始 -->
+<ol>
+<ol><!-- editor2 開始 --></ol>
+</ol>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor2" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <p><!-- 存擋表單開始 --></p>
-<form><label>Filename: <input id="kw_filename2" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src2', 'kw_filename2');" type="submit" value="Save"/></form>
+<label>Filename: <input id="kw_filename2" placeholder="input file name" type="text"/>.py</label><input onclick="doSave('kw_py_src2', 'kw_filename2');" type="submit" value="Save"/>
 <p><!-- 存擋表單結束 --></p>
 <p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
@@ -426,10 +436,20 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console2"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
 <div id="brython_div2"></div>
-<!-- editor2 結束 --><hr/>
+<ol>
+<ol><!-- editor2 結束 --></ol>
+</ol>
+<hr/>
 <p>
 <script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>
 </p>
+</div>
+</div>
+</div>
+</div>
+</form></div>
+</div>
+</div>
 </li>
 <li>
 <p></p>
