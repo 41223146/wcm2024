@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w2</title><link href="./" rel="alternate"></link><link href="./feeds/w2.atom.xml" rel="self"></link><id>./</id><updated>2024-06-13T14:51:08+08:00</updated><entry><title>2024 W2上課內容</title><link href="./2024-Spring-w3-blog-tutorial.html" rel="alternate"></link><published>2024-02-18T11:00:00+08:00</published><updated>2024-06-13T14:51:08+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-02-18:./2024-Spring-w3-blog-tutorial.html</id><summary type="html">&lt;p&gt;w1網際內容管理課上課內容&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;w1網際內容管理課上課內容&lt;/p&gt;
+
+
+&lt;h1&gt;利用 Github Classroom 建立分組網站&lt;/h1&gt;
+&lt;p&gt;在 mdewcm2024 帳號下, 期中分組作業名稱為 1a,各班作業名稱必須有所區別, 而且各分組 Team 名稱也不能相同.&lt;/p&gt;
+&lt;h1&gt;如何利用 Codespaces 維護網站&lt;/h1&gt;
+&lt;p&gt;採用 Github Codespaces 維護網站的好處是, Visual Studio code 介面提供多終端機與多 ports 開啟功能
+可使用init_replit指令安裝Python模組 chmod u+x init_replit&lt;/p&gt;
+&lt;p&gt;./init_replit&lt;/p&gt;
+&lt;p&gt;接著輸入(這是動態網站)&lt;/p&gt;
+&lt;p&gt;python3 main.py&lt;/p&gt;
+&lt;p&gt;再開啟新的終端機&lt;/p&gt;
+&lt;p&gt;python3 -m http.server&lt;/p&gt;
+&lt;p&gt;這是靜態網站&lt;/p&gt;
+&lt;p&gt;即可編輯網站&lt;/p&gt;</content><category term="w2"></category><category term="網誌編寫"></category></entry></feed>
