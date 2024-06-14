@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w6</title><link href="./" rel="alternate"></link><link href="./feeds/w6.atom.xml" rel="self"></link><id>./</id><updated>2024-06-14T02:47:21+08:00</updated><entry><title>2024 W6上課內容</title><link href="./2024-Spring-w6-blog-tutorial.html" rel="alternate"></link><published>2024-02-18T11:00:00+08:00</published><updated>2024-06-14T02:47:21+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-02-18:./2024-Spring-w6-blog-tutorial.html</id><summary type="html">&lt;p&gt;w6網際內容管理上課內容, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;w6網際內容管理上課內容, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
+
+
+&lt;h1&gt;Git 歷史與希望解決的問題&lt;/h1&gt;
+&lt;p&gt;Q: 請簡述一下 Git 的發展歷史, 以及當時的背景如何? Git 想要解決甚麼問題?
+A: Git 是由 Linus Torvalds 在 2005 年創建的分散式版本控制系統。&lt;/p&gt;
+&lt;p&gt;1.誕生（2005）：Linus Torvalds 開始開發 Git，目的是為了管理 Linux 內核代碼的版本。他受到 BitKeeper 版本控制系統的啟發，但對其某些限制感到不滿，因此決定開發一個新的系統。&lt;/p&gt;
+&lt;p&gt;2.開源釋出（2005）：Git 在 2005 年 4 月首次釋出，成為一個自由開源軟件項目。最初，Git 的開發主要集中在 Linux 內核社區。&lt;/p&gt;
+&lt;p&gt;3.快速成長（2005-2008）：Git 在開源社區中迅速增長，許多項目開始轉向使用 Git 進行版本控制，包括像 GNOME 和 X.org 這樣的大型項目。Git 的分散式架構和速度成為其吸引力的主要因素之一。&lt;/p&gt;
+&lt;p&gt;4.GitHub 的出現（2008）：GitHub 是一個基於 Git 的程式碼托管平台，於 2008 年成立。GitHub 的出現進一步推動了 Git 的普及，它提供了方便易用的用戶界面和協作工具，吸引了大量開發者和項目。&lt;/p&gt;
+&lt;p&gt;5.持續改進（2008-至今）：自從創建以來，Git 一直在不斷改進和發展。社區持續貢獻新的功能、修復和改進，使得 Git 變得更加強大、穩定和易用。&lt;/p&gt;
+&lt;h1&gt;Git 如何解決產品設計問題&lt;/h1&gt;
+&lt;p&gt;Q: 身為產品開發人員, 使用的是商用封閉的 CAD 套件, 該如何使用 Git 來提升工作效率?
+A: 以下是一些使用 Git 的方式：&lt;/p&gt;
+&lt;p&gt;1.版本控制: 使用 Git 對 CAD 項目進行版本控制，可以跟蹤每個版本的變更，並輕鬆地回溯到先前的版本。這對於保留歷史記錄、管理修改和恢復意外更改非常有用。&lt;/p&gt;
+&lt;p&gt;2.分支管理: 在 Git 中使用分支來進行不同功能或版本的開發。你可以在不同的分支上同時進行不同的實驗和開發工作，而不會影響主要版本的開發。&lt;/p&gt;
+&lt;p&gt;3.協作與共享: 透過 Git，團隊成員可以輕鬆地共享各自的工作成果，進行協作開發。每個人可以在自己的分支上工作，然後通過合併請求（pull request）將修改合併到主分支中。&lt;/p&gt;
+&lt;p&gt;4.程式審查: 利用 Git 的分支和合併功能進行程式審查。團隊成員可以在專門的分支上提交各自編寫的程式變更，然後其他成員可以查看這些變更，提供意見和建議，最終通過合併到主分支中。&lt;/p&gt;
+&lt;p&gt;5.自動化流程: 使用 Git 配合持續集成（CI）和持續部署（CD）工具，自動化 CAD 項目的測試、構建和部署流程。這樣可以節省時間並降低錯誤，同時確保項目的品質和穩定性。&lt;/p&gt;
+&lt;p&gt;6.文檔和問題追蹤: 將 CAD 專案的文檔和問題追蹤整合到 Git 庫中，以便於跟蹤和管理。例如: 可以使用 Git 提供的 Wiki 功能來撰寫文檔，並使用 Issue 跟蹤功能來追蹤問題和任務。&lt;/p&gt;</content><category term="w6"></category><category term="網誌編寫"></category></entry></feed>
